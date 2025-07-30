@@ -3,6 +3,9 @@ def shell_exec(input_text: str) -> int:
     command = shell_format(input_text)
     command = command.split()
     match (command[0]):
+        case "exit":
+            init.isRun = False
+            statu = 0
         case _:
             statu = -1
     return statu
@@ -15,7 +18,7 @@ def shell_format(input_text: str) -> str:
 def shell_errorid(statu: int) -> str:
     match statu:
         case 0:
-            return ""
+            return "NoError"
         case -1:
             return "CmdNotFound"
         case _:

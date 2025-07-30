@@ -1,5 +1,6 @@
 {
     "welcome": "ZyShell {version}\n输入 help 以获取帮助。",
     "CmdNotFound":"命令不存在：{cmd0}",
-    "UnknownError": "未知错误！错误代码：{statu}"
+    "UnknownError": "未知错误！错误代码：{statu}",
+    "NoError": ""
 }
