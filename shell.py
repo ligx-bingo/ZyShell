@@ -1,6 +1,4 @@
-import main
-
-
+import init
 def shell_exec(input_text: str) -> int:
     command = shell_format(input_text)
     command = command.split()
@@ -11,7 +9,8 @@ def shell_exec(input_text: str) -> int:
 
 
 def shell_format(input_text: str) -> str:
-    return input_text.format(workpath=main.workpath)
+    return input_text.format(workpath=init.workpath)
+
 
 def shell_errorid(statu: int) -> str:
     match statu:
@@ -22,15 +21,17 @@ def shell_errorid(statu: int) -> str:
         case _:
             return "UnknownError"
 
+
 def shell_checkerrorid(errid: str) -> bool:
-    if errid in main.text:
+    if errid in init.text:
         return True
     else:
         return False
 
+
 def shell_errormessage(statu: int) -> str:
     errorid = shell_errorid(statu)
     if shell_checkerrorid(errorid):
-        return main.text[errorid]
+        return init.text[errorid]
     else:
-        return main.defaulttext[errorid]
+        return init.defaulttext[errorid]
