@@ -1,3 +1,5 @@
 {
-    "welcome": "ZyShell {version}\nEnter help to get help."
+    "welcome": "ZyShell {version}\nEnter help to get help.",
+    "CmdNotFound":"Command not found: {cmd0}",
+    "UnknownError": "Unknown error,error code: {statu}"
 }
