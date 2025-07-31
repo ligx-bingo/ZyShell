@@ -1,8 +1,12 @@
 import init
+import cmd.helper
+
 def shell_exec(input_text: str) -> int:
     command = shell_format(input_text)
     command = command.split()
     match (command[0]):
+        case "help":
+            statu = cmd.helper.run(command,init.language)
         case "exit":
             init.isRun = False
             statu = 0
