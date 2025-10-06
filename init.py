@@ -1,13 +1,13 @@
 import zyshcfg
 import os
 import socket
+config = zyshcfg.getcfg()
 if os.getuid() == 0:
-    root = "#"
+    idchar = config["RootCharacter"]
 else:
-    root = "$"
+    idchar = config["UserCharacter"]
 hostname = socket.gethostname()
 username = os.getlogin()
-config = zyshcfg.getcfg()
 version = config["version"]
 language = config["language"]
 text = zyshcfg.gettext(language)

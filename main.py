@@ -2,7 +2,7 @@ import shell
 import init
 while init.isRun:
     try:
-        input_text = input(init.config["cmd-prefix"].format(workpath=init.workpath,username=init.username,hostname=init.hostname,root=init.root))
+        input_text = input(init.config["cmd-prefix"].format(workpath=init.workpath,username=init.username,hostname=init.hostname,idchar=init.idchar))
     except KeyboardInterrupt:
         print()
         exit(0)
