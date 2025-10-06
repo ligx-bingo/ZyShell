@@ -1,4 +1,8 @@
 import zyshcfg
+import os
+import socket
+hostname = socket.gethostname()
+username = os.getlogin()
 config = zyshcfg.getcfg()
 version = config["version"]
 language = config["language"]

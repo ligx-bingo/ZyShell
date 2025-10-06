@@ -8,6 +8,6 @@ def getcfg() -> dict:
 
 
 def gettext(lang: str) -> dict:
-    with open('lang\\{}.json'.format(lang), 'r', encoding='utf-8') as f:
+    with open('lang/{}.json'.format(lang), 'r', encoding='utf-8') as f:
         text = json.load(f)
     return text
