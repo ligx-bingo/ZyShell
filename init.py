@@ -1,6 +1,10 @@
 import zyshcfg
 import os
 import socket
+if os.getuid() == 0:
+    root = "#"
+else:
+    root = "$"
 hostname = socket.gethostname()
 username = os.getlogin()
 config = zyshcfg.getcfg()
